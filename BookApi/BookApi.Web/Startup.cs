@@ -1,3 +1,4 @@
+using BookApi.Infrastructure.IoC;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,6 +28,15 @@ namespace BookApi.Web
         public void ConfigureServices(IServiceCollection services)
         {
 
+            services.AddApiVersioning(config =>
+            {
+                config.DefaultApiVersion = new ApiVersion(1, 0);
+                config.AssumeDefaultVersionWhenUnspecified = true;
+                config.ReportApiVersions = true;
+            });
+
+            services.AddServices(Configuration["ConnectionStrings:Sqlite"]);
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -43,6 +53,8 @@ namespace BookApi.Web
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "BookApi.Web v1"));
             }
+
+            app.UseApiVersioning();
 
             app.UseHttpsRedirection();
 
