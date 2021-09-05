@@ -39,5 +39,11 @@ namespace BookApi.Web.Controllers.V1
             bookEdit.Id = id;
             return Ok(await _bookService.EditBookAsync(bookEdit));
         }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteBook(Guid id)
+        {
+            return Ok(await _bookService.RemoveBookAsync(id));
+        }
     }
 }

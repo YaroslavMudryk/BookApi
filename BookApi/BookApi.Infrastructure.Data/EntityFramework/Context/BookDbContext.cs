@@ -7,7 +7,7 @@ namespace BookApi.Infrastructure.Data.EntityFramework.Context
     {
         public BookDbContext(DbContextOptions<BookDbContext> options) : base(options)
         {
-
+            Database.EnsureCreated();
         }
 
         public DbSet<Book> Books { get; set; }

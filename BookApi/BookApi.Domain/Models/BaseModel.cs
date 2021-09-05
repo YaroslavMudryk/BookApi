@@ -12,7 +12,7 @@ namespace BookApi.Domain.Models
 
     public class BaseEditedModel : BaseCreatedModel
     {
-        public DateTime LastUpdatedAt { get; set; }
+        public DateTime? LastUpdatedAt { get; set; }
         public string LastUpdatedFromIP { get; set; }
         public string LastUpdatedBy { get; set; }
     }
