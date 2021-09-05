@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 namespace BookApi.Domain.Intefaces
 {
@@ -11,7 +12,7 @@ namespace BookApi.Domain.Intefaces
         Task<T> UpdateAsync(T entity);
         Task<T> RemoveAsync(T entity);
         Task<List<T>> GetAllAsync();
-        Task<List<T>> GetListAsync(Func<T, bool> predicate);
-        Task<T> GetAsync(Func<T, bool> predicate);
+        Task<List<T>> GetListAsync(Expression<Func<T, bool>> predicate);
+        Task<T> GetAsync(Expression<Func<T, bool>> predicate);
     }
 }

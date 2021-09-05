@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookApi.Web", "BookApi.Web\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookApi.Domain", "BookApi.Domain\BookApi.Domain.csproj", "{008CE0FA-693A-4B50-BE79-81BE8CA13BA9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookApi.Infrastructure.Data", "BookApi.Infrastructure.Data\BookApi.Infrastructure.Data.csproj", "{5F59290D-2869-4B97-B9C1-2B882D86FB52}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{008CE0FA-693A-4B50-BE79-81BE8CA13BA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{008CE0FA-693A-4B50-BE79-81BE8CA13BA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{008CE0FA-693A-4B50-BE79-81BE8CA13BA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F59290D-2869-4B97-B9C1-2B882D86FB52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F59290D-2869-4B97-B9C1-2B882D86FB52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F59290D-2869-4B97-B9C1-2B882D86FB52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F59290D-2869-4B97-B9C1-2B882D86FB52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
